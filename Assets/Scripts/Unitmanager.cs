@@ -13,14 +13,14 @@ public class Unitmanager : MonoBehaviour
 
 
     //攻撃関数
-    public void Attack(Unitmanager target)
+    public void Attack(Unitmanager target) //targetはbattlemanager.csの（player）（enamy）を持ってきている
     {
-        target.Damage(at);
+        target.Damage(at); //atは設定したatを取得
     }
-
+    
 
     //ダメージ関数
-    void Damage(int damage)
+    void Damage(int damage) //上のatの引数に入った値をもらっている
     {
         hp -= damage;
         Debug.Log(name+"は"+damage+"ダメージ");

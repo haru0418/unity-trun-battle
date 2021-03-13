@@ -15,14 +15,19 @@ public class BattleManager : MonoBehaviour
 
     void Start()
     {
-        player.Attack(enamy);
-        enamy.Attack(player);
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnClickAttackButton()
     {
-        
+        player.Attack(enamy); //unitmanagerのattackの引数のtargetに行く
+        EnamyAttack();
+    }
+
+    public void EnamyAttack()
+    {
+        enamy.Attack(player); //unitmanagerのattackの引数のtargetに行く
+
     }
 }
 
