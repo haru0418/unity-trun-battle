@@ -24,5 +24,10 @@ public class Unitmanager : MonoBehaviour
     {
         hp -= damage;
         Debug.Log(name+"は"+damage+"ダメージ");
+        if (hp <= 0)
+        {
+            hp = 0;
+            Debug.Log(name + "戦闘不能");
+        }
     }
 }
